@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task list</title>
+</head>
+<body>
+    <form method="post">
+        {% for task in task_list %}
+        <div>
+            <input type="checkbox" id="id_{{task}}" name="tasks" value="{{task}}">
+            <label for="id_{{task}}">{{task}}</label>
+        </div>
+        {% endfor %}
+        <div>
+            <button type="submit">Delete</button>
+        </div>
+    </form>
+</body>
+</html>
